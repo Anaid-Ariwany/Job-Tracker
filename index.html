@@ -41,6 +41,243 @@
 
 <body>
 
+    <header>
+        <nav>
+            <img src="assets/images/logo.webp" alt="logo">
+
+            <ul>
+                <li><a>Dashboard</a></li>
+                <li><a>Help</a></li>
+                <li><a><span class="badge"><img src="assets/icons/addIcon.webp" alt="add icon"></span>Add Job</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- updates section -->
+        <section>
+
+            <!-- card -->
+            <div class="card">
+                <!-- top -->
+                <h6 class="text-primary"><span class="badge"><img src="assets/icons/totalIcon.webp" alt="total icon"
+                            class="icon"></span>Total
+                </h6>
+
+                <!-- bottom -->
+                <h4>12</h4>
+            </div>
+
+            <!-- card -->
+            <div class="card">
+                <!-- top -->
+                <h6 class="text-warning"><span class="badge"><img src="assets/icons/interviewIcon.webp"
+                            alt="interview icon" class="icon"></span>Interviews
+                </h6>
+
+                <!-- bottom -->
+                <h4>3</h4>
+            </div>
+
+            <!-- card -->
+            <div class="card">
+                <!-- top -->
+                <h6 class="text-success"><span class="badge"><img src="assets/icons/offerIcon.webp" alt="offers icon"
+                            class="icon"></span>Offers</h6>
+
+                <!-- bottom -->
+                <h4>12</h4>
+            </div>
+
+            <!-- card -->
+            <div class="card">
+                <!-- top -->
+                <h6 class="text-danger"><span class="badge"><img src="assets/icons/rejectedIcon.webp"
+                            alt="rejections icon" class="icon"></span>Rejections
+                </h6>
+
+                <!-- bottom -->
+                <h4>2</h4>
+            </div>
+
+        </section>
+
+
+        <!-- filter section -->
+        <section>
+
+            <!-- filter by status -->
+            <select class="form-select" aria-label="Filter by status">
+                <option selected>Filter by Status</option>
+                <option value="1">Applied</option>
+                <option value="2">Interview</option>
+                <option value="3">Offer</option>
+                <option value="4">Rejected</option>
+            </select>
+
+            <!-- filter by job type -->
+            <select class="form-select" aria-label="Filter by Job Type">
+                <option selected>Filter by Job Type</option>
+                <option value="1">Frontend</option>
+                <option value="2">Backend</option>
+                <option value="3">UI/UX</option>
+                <option value="4">FullStack</option>
+            </select>
+
+            <!-- filter by search -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search by company or position"
+                    aria-label="Search by company or position">
+
+                <button class="input-group-text border-0 bg-transparent p-2" type="button" id="search-button">
+                    <img src="assets/icons/searchIcon.webp" alt="search icon" class="icon">
+                </button>
+            </div>
+
+        </section>
+
+        <!-- job list section -->
+        <section>
+
+            <!-- job item -->
+            <div>
+                <!-- left div -->
+                <div>
+                    <img src="assets/images/googleLogo.webp" alt="google logo">
+                    <div>
+                        <h4>Google</h4>
+                        <h6>Frontend Developer</h6>
+                        <p>Remote <span class="text-secondary">| On-Site</span></p>
+                    </div>
+                </div>
+
+                <!-- right div -->
+                <div>
+                    <button><span class="badge"><img src="assets/icons/editIcon.webp" alt="edit icon"
+                                class="icon"></span>Applied</button>
+                    <button><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
+                                class="icon"></span></button>
+                </div>
+            </div>
+
+            <!-- job item -->
+            <div>
+                <!-- left div -->
+                <div>
+                    <img src="assets/images/slackLogo.webp" alt="slack logo">
+                    <div>
+                        <h4>Slack</h4>
+                        <h6>UI/UX Designer</h6>
+                        <p>Boston <span class="text-secondary">| Hybrid</span></p>
+                    </div>
+                </div>
+
+                <!-- right div -->
+                <div>
+                    <button><span class="badge"><img src="assets/icons/interviewIcon.webp" alt="interview icon"
+                                class="icon"></span>Interview</button>
+                    <button><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
+                                class="icon"></span></button>
+                </div>
+            </div>
+
+            <!-- job item -->
+            <div>
+                <!-- left div -->
+                <div>
+                    <img src="assets/images/spotifyLogo.webp" alt="spotify logo">
+                    <div>
+                        <h4>Spotify</h4>
+                        <h6>Backend Engineer</h6>
+                        <p>Toronto <span class="text-secondary">| On-Site</span></p>
+                    </div>
+                </div>
+
+                <!-- right div -->
+                <div>
+                    <button><span class="badge"><img src="assets/icons/offerIcon.webp" alt="offer icon"
+                                class="icon"></span>Offer</button>
+                    <button><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
+                                class="icon"></span></button>
+                </div>
+            </div>
+
+            <!-- job item -->
+            <div>
+                <!-- left div -->
+                <div>
+                    <img src="assets/images/metaLogo.webp" alt="meta logo">
+                    <div>
+                        <h4>Meta</h4>
+                        <h6>Software Engineer</h6>
+                        <p>Remote <span class="text-secondary">| Romania</span></p>
+                    </div>
+                </div>
+
+                <!-- right div -->
+                <div>
+                    <button><span class="badge"><img src="assets/icons/rejectedIcon.webp" alt="rejected icon"
+                                class="icon"></span>Rejected</button>
+                    <button><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
+                                class="icon"></span></button>
+                </div>
+            </div>
+
+            <!-- job item -->
+            <div>
+                <!-- left div -->
+                <div>
+                    <img src="assets/images/microsoftLogo.webp" alt="microsoft logo">
+                    <div>
+                        <h4>Microsoft</h4>
+                        <h6>Frontend Developer</h6>
+                        <p>Remote <span class="text-secondary">| Kenya</span></p>
+                    </div>
+                </div>
+
+
+                <!-- right div -->
+                <div>
+                    <button><span class="badge"><img src="assets/icons/editIcon.webp" alt="edit icon"
+                                class="icon"></span>Applied</button>
+                    <button><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
+                                class="icon"></span></button>
+                </div>
+            </div>
+
+            <!-- job item -->
+            <div>
+                <!-- left div -->
+                <div>
+                    <img src="assets/images/appleLogo.webp" alt="apple logo">
+                    <div>
+                        <h4>Apple</h4>
+                        <h6>Backend Developer</h6>
+                        <p>Kenya <span class="text-secondary">| On-Site</span></p>
+                    </div>
+                </div>
+
+                <!-- right div -->
+                <div>
+                    <button><span class="badge"><img src="assets/icons/interviewIcon.webp" alt="interview icon"
+                                class="icon"></span>Interview</button>
+                    <button><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
+                                class="icon"></span></button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="assets/images/logo.webp" alt="logo">
+        <p>&copy; 2026 Job-Tracker. All rights reserved.</p>
+    </footer>
+
+
+
     <!-- js -->
     <script src="js/app.js"></script>
     <script src="js/ui.js"></script>
