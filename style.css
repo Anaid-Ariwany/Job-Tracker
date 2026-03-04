@@ -28,9 +28,16 @@ body {
     font-size: 1rem;
 }
 
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 /* ##### header & nav styling ##### */
 
-header {
+header,
+.navbar {
+    background-color: #191717;
     padding: 1rem 2rem;
 }
 
@@ -75,9 +82,47 @@ header {
 }
 
 
-/* ##### header & nav styling ##### */
+/* ##### updates section styling ##### */
+.updateSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 4rem 3rem;
+    margin-top: 4rem;
+    justify-content: center;
+    align-items: center;
+}
 
-.icon {
-    width: 1.5rem;
-    height: 1.5rem;
+.updateSection>.card {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 15rem;
+    border: none;
+}
+
+.updateSection>.card:hover {
+    transform: translateY(-1rem);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+.totalCard {
+    background-color: #bfd1f5;
+}
+
+.interviewCard {
+    background-color: #FEF7E6;
+}
+
+.offerCard {
+    background-color: #b8f0e0;
+}
+
+.rejectionCard {
+    background-color: #FCEAEB;
 }
