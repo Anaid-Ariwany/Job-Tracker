@@ -9,7 +9,7 @@ rejections: #FCEAEB
 
 interviews: #FEF7E6
 
-applied: #2862C4
+applied: #276CF8
 
 text: #FFFFFF
 
@@ -22,7 +22,60 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: #191717;
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 1rem;
 }
+
+/* ##### header & nav styling ##### */
+
+header {
+    padding: 1rem 2rem;
+}
+
+.logo {
+    width: 15rem;
+    height: auto;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.addJob {
+    background-color: #276CF8;
+    border-radius: 0.5rem;
+    max-width: max-content;
+    padding: 0.5rem 2rem;
+}
+
+.addIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.navbar-toggler {
+    background-color: #276CF8;
+}
+
+
+/* ##### header & nav styling ##### */
 
 .icon {
     width: 1.5rem;

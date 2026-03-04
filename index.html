@@ -42,14 +42,23 @@
 <body>
 
     <header>
-        <nav>
-            <img src="assets/images/logo.webp" alt="logo">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo.webp" alt="logo" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <ul>
-                <li><a>Dashboard</a></li>
-                <li><a>Help</a></li>
-                <li><a><span class="badge"><img src="assets/icons/addIcon.webp" alt="add icon"></span>Add Job</a></li>
-            </ul>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                    <li class="nav-item"><a class="nav-link addJob" href="#"><span class="badge"><img
+                                    src="assets/icons/addIcon.webp" alt="add icon" class="addIcon"></span>Add Job</a>
+                    </li>
+                </ul>
+            </div>
+
         </nav>
     </header>
 
