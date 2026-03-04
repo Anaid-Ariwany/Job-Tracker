@@ -1,0 +1,25 @@
+/* 
+background-color: #191717
+
+total: #EAF0FD
+
+offers: #EFF3F5
+
+rejections: #FCEAEB
+
+interviews: #FEF7E6
+
+applied: #2862C4
+
+text: #FFFFFF
+
+card: #1F1D2C
+
+cardlist: #333333
+*/
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
