@@ -38,7 +38,7 @@ body {
 header,
 .navbar {
     background-color: #191717;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
 }
 
 .logo {
@@ -126,3 +126,29 @@ header,
 .rejectionCard {
     background-color: #FCEAEB;
 }
+
+
+/* ##### filter section styling ##### */
+.filterSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-select,
+.input-group {
+    max-width: 15rem;
+    border-radius: 0.5rem;
+}
+
+.input-group {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+
+/* ##### job list section styling ##### */
