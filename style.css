@@ -159,6 +159,7 @@ header,
     align-items: center;
     gap: 1rem;
     padding: 1rem 3rem;
+    margin-bottom: 4rem;
 }
 
 .jobListSection>.card {
@@ -200,6 +201,7 @@ header,
     border: none;
     cursor: pointer;
     border-radius: 0.8rem;
+    font-weight: 600;
 }
 
 .appliedButton {
@@ -229,4 +231,25 @@ header,
 
 .dotsButton {
     background-color: transparent;
+}
+
+/* ##### footer styling ##### */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+    justify-content: space-between;
+    border-top: 1px solid #333333;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #b8f0e0;
+}
+
+footer a:hover {
+    color: #FCEAEB;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
