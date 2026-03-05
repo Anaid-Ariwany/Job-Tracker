@@ -3,7 +3,7 @@ background-color: #191717
 
 total: #EAF0FD
 
-offers: #EFF3F5
+offers: #b8f0e0
 
 rejections: #FCEAEB
 
@@ -152,3 +152,81 @@ header,
 
 
 /* ##### job list section styling ##### */
+.jobListSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 3rem;
+}
+
+.jobListSection>.card {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.leftDiv {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rightDiv {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.companyLogo {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.jobListSection button {
+    border: none;
+    cursor: pointer;
+    border-radius: 0.8rem;
+}
+
+.appliedButton {
+    background-color: #276CF8;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.interviewButton {
+    background-color: #FEF7E6;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.offerButton {
+    background-color: #b8f0e0;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.rejectedButton {
+    background-color: #FCEAEB;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.dotsButton {
+    background-color: transparent;
+}
