@@ -168,11 +168,11 @@ header,
     padding: 1rem 2rem;
     border-radius: 1rem;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     width: 70%;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
 }
 
 .leftDiv {
@@ -252,4 +252,39 @@ footer a:hover {
     color: #FCEAEB;
     font-weight: bold;
     transition: color 0.3s ease;
+}
+
+
+/* ############### Responsive Design ########### */
+/* screens above 900px */
+@media (min-width: 900px) {
+    .updateSection {
+        flex-wrap: nowrap;
+    }
+}
+
+/* screens below above 700px and below 1104px */
+@media (min-width: 700px) and (max-width: 1104px) {
+    .jobListSection>.card {
+        width: 100%;
+    }
+}
+
+/* screens below 700px */
+@media (max-width: 700px) {
+
+    .jobListSection>.card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* screens below 890px */
+@media (max-width: 890px) {
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
 }
