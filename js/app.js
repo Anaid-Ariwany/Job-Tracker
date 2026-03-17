@@ -2,6 +2,8 @@ let jobs = []; // Initialize an empty array to store job data
 
 let jobToDeleteIndex = null; // Variable to store the index of the job to be deleted
 
+let jobToEditIndex = null; // Variable to store the index of the job to be edited
+
 
 /* ##### displaying add job modal */
 
@@ -35,9 +37,8 @@ const submitButton = document.querySelector('#submitButton');
 
 /* handle form submission and data using the submit button */
 submitButton.addEventListener('click', (e) => {
-    e.preventDefault(); //stop page reloading on form submission
+    e.preventDefault();
 
-    //get form values
     const companyName = companyInput.value;
     const position = positionInput.value;
     const dateApplied = dateInput.value;
@@ -50,7 +51,6 @@ submitButton.addEventListener('click', (e) => {
 
     const notes = notesInput.value;
 
-    //create job object and push to jobs array
     const job = {
         company: companyName,
         position: position,
@@ -60,12 +60,24 @@ submitButton.addEventListener('click', (e) => {
         notes: notes
     };
 
-    jobs.push(job);
-    saveToStorage(); //save to localStorage after adding new job
-    renderJobs(); //render job cards after adding new job
+    // DIFFERENCE HERE
+    if (jobToEditIndex !== null) {
+        // UPDATE existing job
+        jobs[jobToEditIndex] = job;
+        jobToEditIndex = null;
+    } else {
+        // ADD new job
+        jobs.push(job);
+    }
 
-    //reset form after submission
+    saveToStorage();
+    renderJobs();
     jobForm.reset();
+
+    submitButton.textContent = 'Add Job';
+
+    // Close modal
+    bootstrap.Modal.getInstance(modal).hide();
 });
 
 
@@ -92,7 +104,7 @@ function renderJobs() {
         </div>
 
         <div class="card-footer d-flex justify-content-end">
-            <button class="btn btn-sm btn-outline-secondary me-2 edit-button">Edit</button>
+            <button data-index="${index}" class="btn btn-sm btn-outline-secondary me-2 edit-button">Edit</button>
             <button data-index="${index}" class="btn btn-sm btn-outline-danger delete-button">Delete</button>
         </div>
     `;
@@ -131,6 +143,45 @@ confirmDeleteButton.addEventListener('click', () => {
 });
 
 
+/* editing jobs */
+jobListContainer.addEventListener('click', (e) => {
+
+    if (e.target.classList.contains('edit-button')) {
+        const index = e.target.dataset.index;
+        const job = jobs[index];
+
+        jobToEditIndex = index;
+        submitButton.textContent = 'Update Job';
+
+        // Fill form with existing data
+        companyInput.value = job.company;
+        positionInput.value = job.position;
+        dateInput.value = job.dateApplied;
+        notesInput.value = job.notes;
+
+        // Set radio buttons (location)
+        document.querySelectorAll('input[name="location"]').forEach(radio => {
+            radio.checked = radio.value === job.location;
+        });
+
+        // Set radio buttons (status)
+        document.querySelectorAll('input[name="status"]').forEach(radio => {
+            radio.checked = radio.value === job.status;
+        });
+
+        // Open modal
+        new bootstrap.Modal(modal).show();
+    }
+});
+
+
+modal.addEventListener('hidden.bs.modal', () => {
+    jobForm.reset();
+    jobToEditIndex = null;
+    submitButton.textContent = 'Add Job';
+});
+
+
 /* save data to localStorage */
 function saveToStorage() {
     localStorage.setItem('jobs', JSON.stringify(jobs));
@@ -147,6 +198,9 @@ function loadData() {
 
 loadData();
 renderJobs();
+
+
+
 
 
 
