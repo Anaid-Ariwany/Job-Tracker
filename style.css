@@ -28,3 +28,8 @@ body {
 main {
     padding: 2rem 3rem;
 }
+
+.card-body {
+    background-color: #111827;
+    color: #F9FAFB;
+}
