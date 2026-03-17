@@ -1,6 +1,6 @@
 let jobs = []; // Initialize an empty array to store job data
 
-
+let jobToDeleteIndex = null; // Variable to store the index of the job to be deleted
 
 
 /* ##### displaying add job modal */
@@ -68,17 +68,7 @@ submitButton.addEventListener('click', (e) => {
     jobForm.reset();
 });
 
-/* 
-// Call the function to add a new job card
-    addJobCard(companyName, position, dateApplied, location, status, notes);
 
-    //reset form after submission
-    jobForm.reset();
-
-
-const jobCard = e.target.closest('.card');
-
-*/
 
 /* ##### creating, reading, and deleting job cards ##### */
 
@@ -119,21 +109,25 @@ const confirmDeleteButton = document.querySelector('#confirmDelete');
 
 jobListContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('delete-button')) {
-        const index = e.target.dataset.index; //get index of job to be deleted
+
+        jobToDeleteIndex = e.target.dataset.index;
 
         // Show the delete confirmation modal
         new bootstrap.Modal(deleteModal).show();
 
-        // Handle the confirmation button click
-        confirmDeleteButton.addEventListener('click', () => {
-            jobs.splice(index, 1);
-            saveToStorage();
-            renderJobs();
-
-            //close modal after deletion
-            new bootstrap.Modal(deleteModal).hide();
-        });
     }
+});
+
+confirmDeleteButton.addEventListener('click', () => {
+    if (jobToDeleteIndex !== null) {
+        jobs.splice(jobToDeleteIndex, 1);
+        saveToStorage();
+        renderJobs();
+
+        jobToDeleteIndex = null; // reset after delete
+    }
+
+    bootstrap.Modal.getInstance(deleteModal).hide();
 });
 
 
