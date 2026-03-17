@@ -1,0 +1,30 @@
+/* 
+Primary: #2563EB
+Dark: #111827
+Gray: #6B7280
+Background: #F9FAFB
+Card White: #FFFFFF
+*/
+
+.inter-heading {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1rem;
+    background-color: #F9FAFB;
+    color: #111827;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 2rem 3rem;
+}
