@@ -31,6 +31,11 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <!-- inter google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,600&display=swap" rel="stylesheet">
+
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -53,10 +58,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
-                    <li class="nav-item"><a class="nav-link addJob" href="#"><span class="badge"><img
-                                    src="assets/icons/addIcon.webp" alt="add icon" class="addIcon"></span>Add Job</a>
-                    </li>
                 </ul>
+                <button class="addJob"><span class="badge"><img src="assets/icons/addIcon.webp" alt="add icon"
+                            class="addIcon"></span>Add Job</button>
             </div>
 
         </nav>
@@ -146,139 +150,91 @@
         </section>
 
         <!-- job list section -->
-        <section class="jobListSection">
+        <section class="jobListSection"></section>
 
-            <!-- job item -->
-            <div class="card">
-                <!-- left div -->
-                <div class="leftDiv">
-                    <img src="assets/images/googleLogo.webp" alt="google logo" class="companyLogo">
-                    <div class="textDiv">
-                        <h4>Google</h4>
-                        <h6>Frontend Developer</h6>
-                        <p>Remote <span class="text-secondary">| On-Site</span></p>
+        <!-- form in a modal -->
+        <div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title inter-heading" id="jobModalLabel">Add Job</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- form -->
+                        <form id="jobForm" class="jobForm">
+                            <div class="mb-3">
+                                <label class="inter-heading" for="companyName" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="companyName"
+                                    placeholder="Code Space Ventures" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="inter-heading" for="position" class="form-label">Position</label>
+                                <input type="text" class="form-control" id="position" placeholder="Frontend Developer"
+                                    required>
+                            </div>
+
+                            <div class="mb-3">
+                                <div>
+                                    <label class="inter-heading" for="location" class="form-label">Location</label>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="btnradio" id="remote" value="Remote"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="remote" value="Remote">Remote</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="hybrid" value="Hybrid"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="hybrid" value="Hybrid">Hybrid</label>
+
+                                    <input type="radio" class="btn-check" name="btnradio" id="onsite" value="On-Site"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="onsite" value="On-Site">On-Site</label>
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <div>
+                                    <label class="inter-heading" for="status" class="form-label">Status</label>
+                                </div>
+                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="statusRadio" id="applied"
+                                        value="Applied" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="applied" value="Applied">Applied</label>
+
+                                    <input type="radio" class="btn-check" name="statusRadio" id="interview"
+                                        value="Interview" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="interview"
+                                        value="Interview">Interview</label>
+
+                                    <input type="radio" class="btn-check" name="statusRadio" id="offer" value="Offer"
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="offer" value="Offer">Offer</label>
+
+                                    <input type="radio" class="btn-check" name="statusRadio" id="rejected"
+                                        value="Rejected" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="rejected"
+                                        value="Rejected">Rejected</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="inter-heading" for="notes" class="form-label">Notes</label>
+                                <textarea class="form-control" id="notes" rows="3"
+                                    placeholder="Add any additional notes here..."></textarea>
+                            </div>
+
+                            <!-- buttons -->
+                            <div class="d-flex justify-content-end gap-2">
+                                <button type="button" class="btn btn-secondary cancelButton" data-bs-dismiss="modal"
+                                    aria-label="Close">Cancel</button>
+                                <button type="submit" class="btn btn-primary submitButton">Add Job</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-
-                <!-- right div -->
-                <div class="rightDiv">
-                    <button class="appliedButton"><span class="badge"><img src="assets/icons/editIcon.webp"
-                                alt="edit icon" class="icon"></span>Applied</button>
-                    <button class="dotsButton"><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
-                                class="icon"></span></button>
-                </div>
             </div>
-
-            <!-- job item -->
-            <div class="card">
-                <!-- left div -->
-                <div class="leftDiv">
-                    <img src="assets/images/slackLogo.webp" alt="slack logo" class="companyLogo">
-                    <div>
-                        <h4>Slack</h4>
-                        <h6>UI/UX Designer</h6>
-                        <p>Boston <span class="text-secondary">| Hybrid</span></p>
-                    </div>
-                </div>
-
-                <!-- right div -->
-                <div class="rightDiv">
-                    <button class="interviewButton text-warning"><span class="badge"><img
-                                src="assets/icons/interviewIcon.webp" alt="interview icon"
-                                class="icon"></span>Interview</button>
-                    <button class="dotsButton"><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
-                                class="icon"></span></button>
-                </div>
-            </div>
-
-            <!-- job item -->
-            <div class="card">
-                <!-- left div -->
-                <div class="leftDiv">
-                    <img src="assets/images/spotifyLogo.webp" alt="spotify logo" class="companyLogo">
-                    <div>
-                        <h4>Spotify</h4>
-                        <h6>Backend Engineer</h6>
-                        <p>Toronto <span class="text-secondary">| On-Site</span></p>
-                    </div>
-                </div>
-
-                <!-- right div -->
-                <div class="rightDiv">
-                    <button class="offerButton text-success"><span class="badge"><img src="assets/icons/offerIcon.webp"
-                                alt="offer icon" class="icon"></span>Offer</button>
-                    <button class="dotsButton"><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
-                                class="icon"></span></button>
-                </div>
-            </div>
-
-            <!-- job item -->
-            <div class="card">
-                <!-- left div -->
-                <div class="leftDiv">
-                    <img src="assets/images/metaLogo.webp" alt="meta logo" class="companyLogo">
-                    <div>
-                        <h4>Meta</h4>
-                        <h6>Software Engineer</h6>
-                        <p>Remote <span class="text-secondary">| Romania</span></p>
-                    </div>
-                </div>
-
-                <!-- right div -->
-                <div class="rightDiv">
-                    <button class="rejectedButton text-danger"><span class="badge"><img
-                                src="assets/icons/rejectedIcon.webp" alt="rejected icon"
-                                class="icon"></span>Rejected</button>
-                    <button class="dotsButton"><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
-                                class="icon"></span></button>
-                </div>
-            </div>
-
-            <!-- job item -->
-            <div class="card">
-                <!-- left div -->
-                <div class="leftDiv">
-                    <img src="assets/images/microsoftLogo.webp" alt="microsoft logo" class="companyLogo">
-                    <div>
-                        <h4>Microsoft</h4>
-                        <h6>Frontend Developer</h6>
-                        <p>Remote <span class="text-secondary">| Kenya</span></p>
-                    </div>
-                </div>
-
-
-                <!-- right div -->
-                <div class="rightDiv">
-                    <button class="appliedButton"><span class="badge"><img src="assets/icons/editIcon.webp"
-                                alt="edit icon" class="icon"></span>Applied</button>
-                    <button class="dotsButton"><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
-                                class="icon"></span></button>
-                </div>
-            </div>
-
-            <!-- job item -->
-            <div class="card">
-                <!-- left div -->
-                <div class="leftDiv">
-                    <img src="assets/images/appleLogo.webp" alt="apple logo" class="companyLogo">
-                    <div>
-                        <h4>Apple</h4>
-                        <h6>Backend Developer</h6>
-                        <p>Kenya <span class="text-secondary">| On-Site</span></p>
-                    </div>
-                </div>
-
-                <!-- right div -->
-                <div class="rightDiv">
-                    <button class="interviewButton text-warning"><span class="badge"><img
-                                src="assets/icons/interviewIcon.webp" alt="interview icon"
-                                class="icon"></span>Interview</button>
-                    <button class="dotsButton"><span class="badge"><img src="assets/icons/dots.webp" alt="dots icon"
-                                class="icon"></span></button>
-                </div>
-            </div>
-
-        </section>
+        </div>
 
     </main>
 

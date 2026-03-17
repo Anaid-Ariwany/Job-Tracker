@@ -18,6 +18,14 @@ card: #1F1D2C
 cardlist: #333333
 */
 
+
+.inter-heading {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -31,6 +39,11 @@ body {
 .icon {
     width: 1.5rem;
     height: 1.5rem;
+}
+
+label {
+    font-size: 1.2rem;
+    padding-bottom: 0.8rem;
 }
 
 /* ##### header & nav styling ##### */
@@ -252,6 +265,14 @@ footer a:hover {
     color: #FCEAEB;
     font-weight: bold;
     transition: color 0.3s ease;
+}
+
+/* form */
+.btn-outline-primary {
+    --bs-btn-color: #191717;
+    --bs-btn-border-color: #191717;
+    --bs-btn-active-bg: #191717;
+    --bs-btn-active-border-color: #191717;
 }
 
 
