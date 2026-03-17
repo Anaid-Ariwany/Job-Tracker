@@ -18,7 +18,7 @@ addButton.addEventListener('click', () => {
     new bootstrap.Modal(modal).show();
 });
 
-
+const modalTitle = document.querySelector('#jobModalLabel');
 
 /*##### handling form and data submission #####*/
 
@@ -75,6 +75,7 @@ submitButton.addEventListener('click', (e) => {
     jobForm.reset();
 
     submitButton.textContent = 'Add Job';
+    modalTitle.textContent = 'Add Job';
 
     // Close modal
     bootstrap.Modal.getInstance(modal).hide();
@@ -152,6 +153,7 @@ jobListContainer.addEventListener('click', (e) => {
 
         jobToEditIndex = index;
         submitButton.textContent = 'Update Job';
+        modalTitle.textContent = 'Update Job';
 
         // Fill form with existing data
         companyInput.value = job.company;
@@ -179,6 +181,7 @@ modal.addEventListener('hidden.bs.modal', () => {
     jobForm.reset();
     jobToEditIndex = null;
     submitButton.textContent = 'Add Job';
+    modalTitle.textContent = 'Add Job';
 });
 
 
