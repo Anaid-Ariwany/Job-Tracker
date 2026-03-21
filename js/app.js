@@ -203,7 +203,32 @@ loadData();
 renderJobs();
 
 
+/* create functions that count the number of jobs in each status */
+function countJobsByStatus(status) {
+    return jobs.filter(job => job.status === status).length;
+}
 
+/* create metric cards for each job status */
+function createMetricCards() {
+    const metricCardsContainer = document.querySelector('.metricCardsContainer');
 
+    // Clear the container
+    metricCardsContainer.innerHTML = '';
 
+    // Create metric cards for each status
+    const statuses = ['Applied', 'Interview', 'Offer', 'Rejected'];
+    statuses.forEach(status => {
+        const count = countJobsByStatus(status);
+        const card = document.createElement('div');
+        card.classList.add('card', 'text-center', 'mb-3');
+        card.innerHTML = `
+            <div class="card-body">
+                <h5 class="card-title">${status}</h5>
+                <p class="card-text">${count} jobs</p>
+            </div>
+        `;
+        metricCardsContainer.appendChild(card);
+    });
+}
 
+createMetricCards();
