@@ -46,20 +46,32 @@
 
 <body>
 
-    <header>
-        <nav>
-            <div>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
                 <img src="assets/images/logo.webp" alt="Job-Tracker Logo" class="logo">
-                <div>
-                    <button onclick="window.location.href='index.html'">Dashboard</button>
-                    <button class="helpButton">Help</button>
-                    <button type="button" class="addButton">Add Job</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <div class="navbar-nav">
+                        <button class="nav-item whiteButton inter-heading"
+                            onclick="window.location.href='index.html'">Dashboard</button>
+                        <button class="helpButton nav-item whiteButton inter-heading">Help</button>
+                        <button type="button" class="addButton nav-item blueButton inter-heading"><span
+                                class="badge"><img src="assets/icons/addIcon.webp" alt="add icon" class="icon"></span>
+                            Add
+                            Job</button>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
+
+        <h1 class="inter-heading">JobTracker</h1>
 
         <!-- metric cards section -->
         <section class="metricCardsContainer"></section>
@@ -207,10 +219,11 @@
     <footer>
         <img src="assets/images/logo.webp" alt="Job-Tracker Logo" class="logo">
         <div>
-            <p>&copy; 2026 Job-Tracker.</p>
+            <p>&copy; 2026 JobTracker.</p>
             <p>All rights reserved.</p>
         </div>
-        <p>Made by <a href="https://github.com/Anaid-Ariwany" target="_blank" rel="noopener noreferrer">Anaid
+        <p>Made by <a class="githubLink" href="https://github.com/Anaid-Ariwany" target="_blank"
+                rel="noopener noreferrer">Anaid
                 Ariwany</a></p>
     </footer>
 

@@ -6,6 +6,13 @@ Background: #F9FAFB
 Card White: #FFFFFF
 */
 
+/* 
+Total: #EBF0FD 
+Interview: #FDF6E3
+Offer: #EEF4F2
+Rejected: #FCEAEC
+*/
+
 .inter-heading {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -18,7 +25,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     background-color: #F9FAFB;
     color: #111827;
     line-height: 1.5;
@@ -27,9 +34,96 @@ body {
 
 main {
     padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
 }
 
-.card-body {
-    background-color: #111827;
-    color: #F9FAFB;
+section {
+    width: 100%;
+}
+
+.logo {
+    width: 15rem;
+    height: auto;
+}
+
+.blueButton {
+    background-color: #2563EB;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    max-width: fit-content;
+}
+
+.whiteButton {
+    background-color: #F9FAFB;
+    color: #111827;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    max-width: fit-content;
+}
+
+.blueButton:hover,
+.whiteButton:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    width: 1.1rem;
+    height: auto;
+}
+
+
+/*##### header & navbar styling #####*/
+header {
+    padding: 1rem 3rem;
+    background-color: #F9FAFB;
+    border-bottom: 1px solid rgb(107, 114, 128, 0.2);
+}
+
+.navbar-nav {
+    gap: 1rem;
+}
+
+.nav-item {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+
+/*##### footer styling #####*/
+/*##### footer styling #####*/
+/*##### footer styling #####*/
+/*##### footer styling #####*/
+/*##### footer styling #####*/
+/*##### footer styling #####*/
+footer {
+    background-color: #6B7280;
+    color: #FFFFFF;
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgb(107, 114, 128, 0.2);
+}
+
+/* grey scale to white image */
+footer .logo {
+    filter: grayscale(100%) brightness(150%);
+}
+
+.githubLink {
+    color: #01feaa;
+    text-decoration: none;
+}
+
+.githubLink:hover {
+    color: #f2394e;
+    transform: scale(1.05);
 }
