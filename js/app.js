@@ -203,7 +203,7 @@ loadData();
 renderJobs();
 
 
-/* create functions that count the number of jobs in each status */
+/*##### create functions that count the number of jobs in each status #####*/
 function countJobsByStatus(status) {
     return jobs.filter(job => job.status === status).length;
 }
@@ -232,3 +232,51 @@ function createMetricCards() {
 }
 
 createMetricCards();
+
+
+/* create filter functions */
+/* filter by search term function */
+function filterJobsBySearchTerm(searchTerm) {
+    return jobs.filter(job =>
+        job.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        job.position.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        job.status.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        job.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        job.notes.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+}
+
+/* handle filter button clicks */
+const searchInput = document.querySelector('#searchInput');
+
+/* handle search input */
+searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value;
+    const filteredJobs = filterJobsBySearchTerm(searchTerm);
+    renderFilteredJobs(filteredJobs);
+});
+
+/* render filtered jobs */
+function renderFilteredJobs(filteredJobs) {
+    jobListContainer.innerHTML = '';
+    filteredJobs.forEach((job, index) => {
+        const jobCard = document.createElement('div');
+        jobCard.classList.add('card', 'mb-3');
+        jobCard.innerHTML = `
+            <div class="card-body">
+            <h5 class="card-title">${job.company} - ${job.position}</h5>
+            <p class="card-text"><strong>Date Applied:</strong> ${job.dateApplied}</p>
+            <p class="card-text"><strong>Location:</strong> ${job.location}</p>
+            <p class="card-text"><strong>Status:</strong> ${job.status}</p>
+            <p class="card-text"><strong>Notes:</strong> ${job.notes}</p>
+        </div>  
+        <div class="card-footer d-flex justify-content-end">
+            <button data-index="${index}" class="btn btn-sm btn-outline-secondary me-2 edit-button">Edit</button>
+            <button data-index="${index}" class="btn btn-sm btn-outline-danger delete-button">Delete</button>
+        </div>
+    `;
+        jobListContainer.appendChild(jobCard);
+    });
+}
+
+renderFilteredJobs(jobs);
