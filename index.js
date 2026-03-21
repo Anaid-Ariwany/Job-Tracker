@@ -106,18 +106,30 @@ function renderJobs() {
         const jobCard = document.createElement('div');
         jobCard.classList.add('card', 'mb-3');
         jobCard.innerHTML = `
-            <div class="card-body">
-            <h5 class="card-title">${job.company} - ${job.position}</h5>
-            <p class="card-text"><strong>Date Applied:</strong> ${job.dateApplied}</p>
-            <p class="card-text"><strong>Location:</strong> ${job.location}</p>
-            <p class="card-text"><strong>Status:</strong> ${job.status}</p>
-            <p class="card-text"><strong>Notes:</strong> ${job.notes}</p>
-        </div>
+            <div class="leftSideCard">
+            
+                <div>
+                    <img src="assets/images/bagLogo.webp" alt="bag logo" class="bagLogo">
+                </div>
 
-        <div class="card-footer d-flex justify-content-end">
-            <button data-index="${index}" class="btn btn-sm btn-outline-secondary me-2 edit-button">Edit</button>
-            <button data-index="${index}" class="btn btn-sm btn-outline-danger delete-button">Delete</button>
-        </div>
+                <div class="middleSideCard">
+                    <h4 class="card-title inter-heading">${job.company}</h4>
+                    <p class="card-text">${job.position}</p>
+                    <figcaption class="blockquote-footer">${job.location} | <cite title="Source Title">${job.status}</cite>
+                    </figcaption>
+                </div>
+
+                <div class="hiddenDetails">
+                    <p class="card-text">${job.dateApplied}</p>
+                    <p class="card-text">${job.notes}</p>
+                </div>
+
+            </div>  
+
+            <div class="rightSideCard">
+                <button data-index="${index}" class="edit-button">View More | Edit</button>
+                <button data-index="${index}" class="delete-button">Delete</button>
+            </div>
     `;
 
         // Append the new card to the job list section
@@ -276,17 +288,30 @@ function renderFilteredJobs(filteredJobs) {
         const jobCard = document.createElement('div');
         jobCard.classList.add('card', 'mb-3');
         jobCard.innerHTML = `
-            <div class="card-body">
-            <h5 class="card-title">${job.company} - ${job.position}</h5>
-            <p class="card-text"><strong>Date Applied:</strong> ${job.dateApplied}</p>
-            <p class="card-text"><strong>Location:</strong> ${job.location}</p>
-            <p class="card-text"><strong>Status:</strong> ${job.status}</p>
-            <p class="card-text"><strong>Notes:</strong> ${job.notes}</p>
-        </div>  
-        <div class="card-footer d-flex justify-content-end">
-            <button data-index="${index}" class="btn btn-sm btn-outline-secondary me-2 edit-button">Edit</button>
-            <button data-index="${index}" class="btn btn-sm btn-outline-danger delete-button">Delete</button>
-        </div>
+            <div class="leftSideCard">
+            
+                <div>
+                    <img src="assets/images/bagLogo.webp" alt="bag logo" class="bagLogo">
+                </div>
+
+                <div class="middleSideCard">
+                    <h4 class="card-title inter-heading">${job.company}</h4>
+                    <p class="card-text">${job.position}</p>
+                    <figcaption class="blockquote-footer">${job.location} | <cite title="Source Title">${job.status}</cite>
+                    </figcaption>
+                </div>
+
+                <div class="hiddenDetails">
+                    <p class="card-text">${job.dateApplied}</p>
+                    <p class="card-text">${job.notes}</p>
+                </div>
+
+            </div>  
+
+            <div class="rightSideCard">
+                <button data-index="${index}" class="edit-button">View More | Edit</button>
+                <button data-index="${index}" class="delete-button">Delete</button>
+            </div>
     `;
         jobListContainer.appendChild(jobCard);
     });
