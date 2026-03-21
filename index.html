@@ -51,8 +51,8 @@
             <div>
                 <img src="assets/images/logo.webp" alt="Job-Tracker Logo" class="logo">
                 <div>
-                    <button>Dashboard</button>
-                    <button>Help</button>
+                    <button onclick="window.location.href='index.html'">Dashboard</button>
+                    <button class="helpButton">Help</button>
                     <button type="button" class="addButton">Add Job</button>
                 </div>
             </div>
@@ -171,6 +171,32 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-danger" id="confirmDelete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- help modal -->
+        <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="helpModalLabel">Help</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Welcome to the Job Tracker!</h4>
+                        <p>Job Tracker helps you keep track of your job applications and manage your job search process.
+                            You apply, we track!</p>
+                        <h5>Here are some tips to get you started:</h5>
+                        <ul>
+                            <li>Click "Add Job" to add a new job application.</li>
+                            <li>Click "Edit" on any job card to update its information.</li>
+                            <li>Click "Delete" on any job card to remove it.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

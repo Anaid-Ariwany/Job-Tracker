@@ -5,20 +5,30 @@ let jobToDeleteIndex = null; // Variable to store the index of the job to be del
 let jobToEditIndex = null; // Variable to store the index of the job to be edited
 
 
-/* ##### displaying add job modal */
+/* ##### displaying modal */
 
-/* select add button */
+/* select button */
 const addButton = document.querySelector('.addButton');
+const helpButton = document.querySelector('.helpButton');
 
 /* display modal when button is clicked */
 const modal = document.querySelector('#jobModal');
+const helpModal = document.querySelector('#helpModal');
+
 
 addButton.addEventListener('click', () => {
     // Show the modal        
     new bootstrap.Modal(modal).show();
 });
 
+helpButton.addEventListener('click', () => {
+    // Show the help modal
+    new bootstrap.Modal(helpModal).show();
+});
+
 const modalTitle = document.querySelector('#jobModalLabel');
+
+
 
 /*##### handling form and data submission #####*/
 
