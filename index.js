@@ -230,11 +230,14 @@ function createMetricCards() {
     statuses.forEach(status => {
         const count = countJobsByStatus(status);
         const card = document.createElement('div');
-        card.classList.add('card', 'text-center', 'mb-3');
+        card.classList.add('card', 'text-center', 'mb-3', 'metricCard');
         card.innerHTML = `
             <div class="card-body">
-                <h5 class="card-title">${status}</h5>
-                <p class="card-text">${count} jobs</p>
+                <div class="metricTopDiv">
+                    <div class="metricIcon"></div>
+                    <h5 class="card-title">${status}</h5>
+                </div>
+                <h3 class="card-text">${count}</h3>
             </div>
         `;
         metricCardsContainer.appendChild(card);

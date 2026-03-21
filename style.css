@@ -7,7 +7,7 @@ Card White: #FFFFFF
 */
 
 /* 
-Total: #EBF0FD 
+Applied: #EBF0FD 
 Interview: #FDF6E3
 Offer: #EEF4F2
 Rejected: #FCEAEC
@@ -38,6 +38,7 @@ main {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    margin-bottom: 10rem;
 }
 
 section {
@@ -97,9 +98,115 @@ header {
 }
 
 
-/*##### footer styling #####*/
-/*##### footer styling #####*/
-/*##### footer styling #####*/
+/*##### metric cards section styling #####*/
+.metricCardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.metricCard h3 {
+    color: #111827;
+}
+
+.metricTopDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #0000ff;
+    font-weight: bold;
+}
+
+.metricCard {
+    background-color: rgb(0, 0, 255, 0.1);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    width: 20%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.metricCard:hover {
+    transform: scale(1.05);
+}
+
+.metricIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url('assets/icons/appliedIcon.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.metricCard:nth-child(2) {
+    background-color: rgb(255, 165, 0, 0.1);
+}
+
+.metricCard:nth-child(2) .metricTopDiv {
+    color: #ffa500;
+}
+
+.metricCard:nth-child(2) .metricIcon {
+    background-image: url('assets/icons/interviewIcon.webp');
+}
+
+
+
+.metricCard:nth-child(3) {
+    background-color: rgb(0, 128, 0, 0.1);
+}
+
+.metricCard:nth-child(3) .metricTopDiv {
+    color: #008000;
+}
+
+.metricCard:nth-child(3) .metricIcon {
+    background-image: url('assets/icons/offerIcon.webp');
+}
+
+
+
+.metricCard:nth-child(4) {
+    background-color: rgb(255, 0, 0, 0.1);
+}
+
+.metricCard:nth-child(4) .metricTopDiv {
+    color: #ff0000;
+}
+
+.metricCard:nth-child(4) .metricIcon {
+    background-image: url('assets/icons/rejectedIcon.webp');
+}
+
+
+/*##### filter section styling #####*/
+.filterSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchInput {
+    width: 60%;
+    border: 1px solid rgb(107, 114, 128, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*##### job list section styling #####*/
+.jobListSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
 /*##### footer styling #####*/
 /*##### footer styling #####*/
 /*##### footer styling #####*/
