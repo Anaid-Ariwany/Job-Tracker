@@ -125,6 +125,7 @@ header {
     gap: 0.5rem;
     color: #0000ff;
     font-weight: bold;
+    width: 100%;
 }
 
 .metricCard {
@@ -141,8 +142,8 @@ header {
 }
 
 .metricIcon {
-    width: 1.5rem;
-    height: 1.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
     background-image: url('assets/icons/appliedIcon.webp');
     background-size: cover;
     background-position: center;
@@ -283,8 +284,6 @@ header {
 
 
 /*##### footer styling #####*/
-/*##### footer styling #####*/
-/*##### footer styling #####*/
 footer {
     background-color: #6B7280;
     color: #FFFFFF;
@@ -308,4 +307,216 @@ footer .logo {
 .githubLink:hover {
     color: #f2394e;
     transform: scale(1.05);
+}
+
+
+/*############### responsive design ###############*/
+/* screens btn 768px and 992px */
+@media (min-width: 768px) and (max-width: 992px) {
+    .metricCardsContainer {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .metricCard {
+        width: 25%;
+    }
+
+    #searchInput {
+        width: 80%;
+    }
+
+    .jobListContainer>.card {
+        width: 100%;
+    }
+
+    footer,
+    header {
+        padding: 1rem;
+    }
+}
+
+/* screens btn 577px and 768px */
+@media (min-width: 577px) and (max-width: 768px) {
+    .metricCardsContainer {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .metricCard {
+        width: 30%;
+        padding: 1rem;
+    }
+
+    .metricCard h5 {
+        font-size: 1.15rem;
+    }
+
+    #searchInput {
+        width: 80%;
+    }
+
+    .jobListContainer>.card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .metricTopDiv {
+        gap: 0.1rem;
+    }
+
+    .leftSideCard,
+    .rightSideCard {
+        gap: 0.5rem;
+    }
+
+    .rightSideCard {
+        gap: 0.5rem;
+    }
+
+    footer,
+    header,
+    main {
+        padding: 1rem;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+}
+
+/* screens below 576px */
+@media (max-width: 576px) {
+    .metricCardsContainer {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .metricCard {
+        width: 45%;
+        padding: 1rem;
+    }
+
+    .rightSideCard {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .leftSideCard,
+    .rightSideCard {
+        gap: 0.5rem;
+    }
+
+    #searchInput {
+        width: 80%;
+    }
+
+    .jobListContainer>.card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .metricTopDiv {
+        gap: 1rem;
+    }
+
+    footer,
+    header,
+    main {
+        padding: 1rem;
+    }
+
+    footer {
+        flex-wrap: wrap;
+    }
+}
+
+/* screens below 490px */
+@media (max-width: 490px) {
+    footer {
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .jobListContainer>.card {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .rightSideCard {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .leftSideCard,
+    .rightSideCard {
+        gap: 1rem;
+    }
+
+    .metricTopDiv {
+        gap: 0.5rem;
+    }
+}
+
+/* screens below 360px */
+@media (max-width: 360px) {
+    .metricCardsContainer {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .metricCard {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .rightSideCard {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .leftSideCard,
+    .rightSideCard {
+        gap: 0.5rem;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+    .jobListContainer>.card {
+        width: 100%;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    .metricTopDiv {
+        gap: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.15rem;
+    }
+
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    .logo {
+        width: 10rem;
+    }
 }

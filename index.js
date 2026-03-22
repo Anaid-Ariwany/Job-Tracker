@@ -127,7 +127,7 @@ function renderJobs() {
             </div>  
 
             <div class="rightSideCard">
-                <button data-index="${index}" class="edit-button">View More | Edit</button>
+                <button data-index="${index}" class="edit-button">View | Edit</button>
                 <button data-index="${index}" class="delete-button">Delete</button>
             </div>
     `;
@@ -309,7 +309,7 @@ function renderFilteredJobs(filteredJobs) {
             </div>  
 
             <div class="rightSideCard">
-                <button data-index="${index}" class="edit-button">View More | Edit</button>
+                <button data-index="${index}" class="edit-button">View | Edit</button>
                 <button data-index="${index}" class="delete-button">Delete</button>
             </div>
     `;
