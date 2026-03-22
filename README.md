@@ -1,10 +1,16 @@
-# JobTracker – Job Application Tracker (CRUD + Local Storage)
+# JobTracker – Job Application Tracker
 
 ### Live Website
-[View live website here: still in development](https://anaid-ariwany.github.io/Job-Tracker/)
+[View live website](https://anaid-ariwany.github.io/Job-Tracker/)
 
 ## Project Purpose
 JobTrackr is a **personal job application tracker**. It's a **personal dashboard to track jobs you applied to**.
+
+#### Skills:
+- CRUD
+- Localstorage
+- DOM Manipulation & Event Handling
+- Problem-solving
 
 ### Example real-life flow:
 
@@ -19,6 +25,7 @@ JobTrackr is a **personal job application tracker**. It's a **personal dashboard
    * Location: Remote
    * Date Applied: March 4
    * Status: Applied
+   * Notes: Awaiting Responses
 
 That’s it. You’re logging your activity.
 
